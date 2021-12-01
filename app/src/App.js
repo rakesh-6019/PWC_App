@@ -23,8 +23,7 @@ function App() {
           />
         </div>
         <p>
-          I hope to find a small yet complex table rendering component
-          intruiging!
+          I hope to find a small table rendering component intruiging!
         </p>
         <a
           className="App-link"

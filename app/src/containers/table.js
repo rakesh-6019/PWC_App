@@ -3,6 +3,7 @@ import PropTypes from "prop-types";
 import axios from 'axios';
 import {CircularProgress} from '@material-ui/core';
 import CustomTable from "../components/CustomTable";
+import { UserDetails } from "./userDetails";
 
 export function Table(props) {
 
@@ -45,20 +46,24 @@ export function Table(props) {
         }
     ]
 
-    console.log(users);
-
     return (
-        <div style={{width: '1000px'}}>
-        {users.length === 0 ? <CircularProgress /> : (<div>
+        <div style={{width: '1000px', marginTop: '2rem'}}>
+        {users.length === 0 ? <CircularProgress color="success" /> : (<div>
             <CustomTable
                 data={users}
                 uniqueKey={(row) => row.id}
-                noDataText="no users found!"
+                noDataText="No users found!"
                 columns={columns}
-                showPagination={false}
+                showPagination
+                defaultPaginationRows={10}
+                paginationRowOptions={[5,10,25,100]}
                 enableFilters
                 enableSorting
-                nonCollapsible
+                defaultSorted={{
+                    id: 'name',
+                    order: 'asc',
+                }}
+                SubComponent={(row) => <UserDetails address={row.address} /> }
             />
         </div>)}
         </div>
