@@ -13,7 +13,7 @@ function App() {
             src={logo}
             className="App-logo"
             alt="logo"
-            style={{ height: "100px", marginTop: "5rem" }}
+            style={{ height: "100px", marginTop: "3rem" }}
           />
           <img
             src={nodejs}
@@ -23,7 +23,7 @@ function App() {
           />
         </div>
         <p>
-          I hope to find a small table rendering component intruiging!
+          I hope you find a small table rendering component intruiging!
         </p>
         <a
           className="App-link"

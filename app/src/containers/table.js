@@ -64,6 +64,7 @@ export function Table(props) {
                     order: 'asc',
                 }}
                 SubComponent={(row) => <UserDetails address={row.address} /> }
+                maxTableHeight={400}
             />
         </div>)}
         </div>
