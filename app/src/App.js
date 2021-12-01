@@ -1,13 +1,30 @@
-import logo from './logo.svg';
-import './App.css';
+import logo from "./logo.svg";
+import nodejs from "./nodejs.png";
+import "./App.css";
+import React from "react";
+import { Table } from "./containers/table";
 
 function App() {
   return (
     <div className="App">
       <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
+        <div>
+          <img
+            src={logo}
+            className="App-logo"
+            alt="logo"
+            style={{ height: "100px", marginTop: "5rem" }}
+          />
+          <img
+            src={nodejs}
+            className="App-logo"
+            alt="logo"
+            style={{ height: "100px", marginTop: "5rem" }}
+          />
+        </div>
         <p>
-          Edit <code>src/App.js</code> and save to reload.
+          I hope to find a small yet complex table rendering component
+          intruiging!
         </p>
         <a
           className="App-link"
@@ -15,8 +32,9 @@ function App() {
           target="_blank"
           rel="noopener noreferrer"
         >
-          Learn React
+          Users
         </a>
+        <Table />
       </header>
     </div>
   );
