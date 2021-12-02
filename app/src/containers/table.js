@@ -1,5 +1,4 @@
 import React from "react";
-import PropTypes from "prop-types";
 import axios from 'axios';
 import {CircularProgress} from '@material-ui/core';
 import CustomTable from "../components/CustomTable";
@@ -63,7 +62,7 @@ export function Table(props) {
                     id: 'name',
                     order: 'asc',
                 }}
-                SubComponent={(row) => <UserDetails address={row.address} /> }
+                SubComponent={(row) => <UserDetails address={row.address} company={row.company} /> }
                 maxTableHeight={400}
             />
         </div>)}

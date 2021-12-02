@@ -3,7 +3,7 @@ import LocationOn from "@material-ui/icons/LocationOn";
 
 export function UserDetails(props) {
   const {
-    address: { suite, street, city, zipcode, geo },
+    address: { suite, street, city, zipcode, geo }, company
   } = props;
   return (
     <div style={{ padding: "1rem" }}>
@@ -19,6 +19,11 @@ export function UserDetails(props) {
       >
         <LocationOn style={{marginBottom: '-5px'}}/>
       </a>
+      <br/>
+      <h3 style={{ display: "inline-block" }}>Company:</h3>
+      <p
+        style={{ display: "inline-block", marginLeft: "5px" }}
+      >{company.name}</p>
     </div>
   );
 }
